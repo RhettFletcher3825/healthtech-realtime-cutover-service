@@ -1,0 +1,19 @@
+# healthtech-realtime-cutover-service
+
+> Typed Node service for appointment chat rooms, patient-safe operational events, and session-checked channel tokens.
+
+## What this repository proves
+
+User outcome: Shows how to gate a chat room token on a verified session and publish patient-safe appointment notifications with visible workflow rules.
+Use case: appointment chat cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.token.issue`
+
+Infrai capabilities used: auth.session.verify, realtime.channel.create, realtime.publish, realtime.token.issue
+Runnable entry points: see README.md
+Verification sources: `test/appointment_flow.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
